@@ -1,0 +1,74 @@
+doctype html
+html(lang='en', ng-app='myApp')
+head
+    meta(name='google-site-verification', content='3kZT3HX-cz9Hipf_5RBJp-WOPJO2nktedqYEdQw6H4M')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title ActiveLife
+    link(rel='icon', type='image', href='images/icons/fevcn.png', style='width: 100px;')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/angular-ui-notification.min.css', rel='stylesheet')
+    link(href='css/animate.css', rel='stylesheet')
+    link(href='css/contact.css', rel='stylesheet')
+    link(href='css/slick-theme.css', rel='stylesheet')
+    link(href='css/slick-theme.css', rel='stylesheet')
+    link(href='css/normalize.css', rel='stylesheet')
+    link(href='font-awesome-4.4.0/css/font-awesome.min.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/style.css', rel='stylesheet')
+    link(href='css/mystyle.css', rel='stylesheet')
+    link(href='css/media-queries.css', rel='stylesheet')
+    link(rel='stylesheet', href='css/lightslider.css')
+    link(rel='stylesheet', type='text/css', href='css/demo.css')
+    // &#45;&#45;&#45;&#45;for hover image
+    link(rel='stylesheet', type='text/css', href='css/style_common.css')
+    link(rel='stylesheet', type='text/css', href='css/style4.css')
+    script(src='js/angular.min.js')
+    script(src='js/angular-ui-router.js')
+    script(src='js/angular-ui-notification.min.js')
+    script(src='js/app.js')
+    script(src='js/services.js')
+    script(src='js/lb-services.js')
+    script(src='js/jquery-1.10.2.min.js')
+    script(src='js/jquery.smooth-scroll.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/slick.min.js')
+    script(src='js/angular-resource.min.js')
+    script(src='js/custom.js')
+    script(src='js/Chart.min.js')
+    script(src='js/angular-chart.min.js')
+    script(type='text/javascript', src='js/ui-bootstrap-tpls.min.js')
+    script.
+        $(document).ready(function(){$(".addresscolor  ").on("click",function(){$(this).addClass("active").siblings(".active").removeClass("active");});});
+    script.
+        $(document).on('click','#main-menu .navbar-collapse.in',function(e){if($(e.target).is('a')){$(this).collapse('hide');}});
+    //
+      <script>$(window).scroll(function(){if($(this).scrollTop()>10){$('.logo_size').css('width','180px');$('.logo_size').css('height','67px');}else{$('.logo_size').css('width','250px');$('.logo_size').css('height','114px');}
+      var mql=window.matchMedia("screen and (max-width: 768px)")
+      if(mql.matches){if($(this).scrollTop()>10){$('.logo_size').css('postion','relative');$('.logo_size').css('margin-top','-10px');$('.logo_size').css('height','60px');}else{$('.logo_size').css('width','150px');$('.logo_size').css('height','105px');}}
+      var mql=window.matchMedia("screen and (max-width: 767px)")
+      if(mql.matches){if($(this).scrollTop()>10){$('.logo_size').css('postion','relative');$('.logo_size').css('margin-top','-10px');$('.logo_size').css('height','65px');}else{$('.logo_size').css('width','100px');$('.logo_size').css('height','65px');}}});</script>
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-82195755-1','auto');ga('send','pageview');
+    script.
+        $(document).ready(function() {
+            $('#showmenu').click(function() {
+                $('.menu').toggle("slide");
+            });
+        });
+    // -- Header Part ---
+    body
+        section
+    .payment-success.m-tb75
+        .container
+            .row.nopadding.intro-section.content-part
+                .col-lg-offset-2.col-lg-8.col-lg-offset-2.col-md-offset-1.col-md-10.col-md-offset-1.col-sm-12.col-xs-12.text-center
+                    div
+                        #base.dd.animated.bounceInDown
+                            i.fa.fa-thumbs-o-up.fa-3x.color-fff
+                        h2.text-capitalize.payment-message
+                        .underline
+                            .underline-inner
+                    .payment-successdetails
+                        h3.text-center Don't Refresh The Page
+                        a(ng-controller='paymentUpdateController', ng-click="redirect('order')", ng-init="updateOrder('#{udf1}','#{udf2}')")

@@ -1,0 +1,28 @@
+html
+  script.
+    function submitPayuForm() {
+      var payuForm = document.forms.payuForm;
+      //console.log("Pay form:"+JSON.stringify(payuForm));
+      payuForm.submit();
+    }
+  body(onload='submitPayuForm();')
+    form(action='https://secure.payu.in/_payment', method='post', name='payuForm')
+      input(type='hidden', name='key', value='#{key}')
+      input(type='hidden', name='hash', value='#{hash}')
+      input(type='hidden', name='txnid', value='#{txnid}')
+      input(type='hidden', name='udf1', value='#{udf1}')
+      input(type='hidden', name='udf2', value='#{udf2}')
+      input(type='hidden', name='service_provider', value='#{service_provider}')
+      center
+        h1 Please do not refresh this page...
+      input(type='hidden', name='amount', value='#{amount}')
+      input#firstname(type='hidden', name='firstname', value='#{firstname}')
+      input#email(type='hidden', name='email', value='#{email}')
+      input(type='hidden', name='phone', value='#{phone}')
+      input(type='hidden', name='productinfo', value='#{productinfo}', size='64')
+      input(type='hidden', name='surl', value='#{surl}', size='64')
+      input(type='hidden', name='furl', value='#{furl}', size='64')
+      // input#udf1(type='hidden', name='udf1', value='#{udf1}')
+      // input#udf1(type='hidden', name='udf3', value='#{udf3}')
+      input#hashstring(type='hidden', name='hashstring', value='#{hashstring}')
+      input(type='hidden', value='Confirm Details')

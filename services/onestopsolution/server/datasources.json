@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "onestopsolution": {
+    "host": "localhost",
+    "port": 29047,
+    "url": "",
+    "database": "onestopesolution",
+    "password": "",
+    "name": "onestopsolution",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
