@@ -15,4 +15,12 @@ angular.module('newAppApp')
       'Karma'
     ];
     console.log('enter to login');
+     $(function() {
+
+            $('#da-slider').cslider({
+                autoplay	: true,
+                bgincrement	: 450
+            });
+
+        });
   });
